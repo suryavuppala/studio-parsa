@@ -65,7 +65,7 @@ export default function HomePage() {
   }
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${
+    <div className={`min-h-screen transition-colors overflow-x-hidden duration-500 ${
       isDarkMode 
         ? 'bg-[#0F0F0F] text-[#F5F5F5]' 
         : 'bg-[#F5F5F5] text-[#1A1A1A]'
