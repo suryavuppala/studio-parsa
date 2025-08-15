@@ -41,19 +41,38 @@ export default function PhonePopupCard() {
     }
   }
 
-  const handleSubmit = () => {
-    const fullNumber = `+${getCountryCallingCode(country)}${phone}`
-    const parsed = parsePhoneNumberFromString(fullNumber, country)
+  const handleSubmit = async () => {
+    const fullNumber = `+${getCountryCallingCode(country)}${phone}`;
+    const parsed = parsePhoneNumberFromString(fullNumber, country);
 
     if (!parsed?.isValid()) {
-      setError(`Please enter a valid phone number for ${country}`)
-      return
+      setError(`Please enter a valid phone number for ${country}`);
+      return;
     }
 
-    setError('')
-    console.log('✅ Valid phone:', parsed.number)
-    setShow(false)
-  }
+    setError('');
+
+    try {
+      const res = await fetch('/get-in-touch', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone_number: parsed.number }),
+      });
+
+      if (!res.ok) {
+        const errData = await res.json();
+        throw new Error(errData.error || 'Failed to save phone number');
+      }
+
+      const data = await res.json();
+      console.log('✅ Phone number saved:', data);
+
+      setShow(false);
+    } catch (err) {
+      console.error('❌ Error submitting phone number:', err);
+      setError('Something went wrong. Please try again.');
+    }
+  };
 
   const handleBackdropClick = (e: any) => {
     if (!cardRef.current?.contains(e.target)) {

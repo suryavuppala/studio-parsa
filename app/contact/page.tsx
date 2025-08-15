@@ -6,6 +6,39 @@ import { FiMail, FiPhone, FiMapPin, FiMenu, FiX, FiSun, FiMoon } from 'react-ico
 export default function ContactPage() {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  async function formSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const res = await fetch(' /contact-us', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error('Failed to submit form');
+
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' }); // Clear form
+    } catch (err) {
+      console.error(err);
+      setStatus('error');
+    }
+  }
+
   useEffect(() => {
     const savedTheme = 'dark'
     if (savedTheme) {
@@ -151,43 +184,65 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={formSubmit}>
             <div>
               <label className="block mb-1 font-semibold">Your Name</label>
               <input
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 className={`w-full p-3 rounded-md border ${
-                  isDarkMode ? 'bg-[#1E1E1E] border-[#333] text-white placeholder:text-gray-300' : 'border-gray-300'
+                  isDarkMode
+                    ? 'bg-[#1E1E1E] border-[#333] text-white placeholder:text-gray-300'
+                    : 'border-gray-300'
                 }`}
                 placeholder="Enter your name"
+                required
               />
             </div>
             <div>
               <label className="block mb-1 font-semibold">Your Email</label>
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 className={`w-full p-3 rounded-md border ${
-                  isDarkMode ? 'bg-[#1E1E1E] border-[#333] text-white placeholder:text-gray-300' : 'border-gray-300'
+                  isDarkMode
+                    ? 'bg-[#1E1E1E] border-[#333] text-white placeholder:text-gray-300'
+                    : 'border-gray-300'
                 }`}
                 placeholder="Enter your email"
+                required
               />
             </div>
             <div>
               <label className="block mb-1 font-semibold">Message</label>
               <textarea
                 rows={5}
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 className={`w-full p-3 rounded-md border ${
-                  isDarkMode ? 'bg-[#1E1E1E] border-[#333] text-white placeholder:text-gray-300' : 'border-gray-300'
+                  isDarkMode
+                    ? 'bg-[#1E1E1E] border-[#333] text-white placeholder:text-gray-300'
+                    : 'border-gray-300'
                 }`}
                 placeholder="Type your message here..."
+                required
               ></textarea>
             </div>
             <button
               type="submit"
-              className="bg-[#A87E6E] text-white px-6 py-3 rounded-md font-bold hover:bg-[#946b5e] transition"
+              disabled={status === 'loading'}
+              className="bg-[#A87E6E] text-white px-6 py-3 rounded-md font-bold hover:bg-[#946b5e] transition disabled:opacity-50"
             >
-              Send Message
+              {status === 'loading' ? 'Sending...' : 'Send Message'}
             </button>
+
+            {status === 'success' && <p className="text-green-500">Message sent successfully!</p>}
+            {status === 'error' && <p className="text-red-500">Something went wrong. Please try again.</p>}
           </form>
         </div>
       </section>

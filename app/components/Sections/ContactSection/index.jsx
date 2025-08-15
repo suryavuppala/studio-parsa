@@ -57,7 +57,26 @@ export default function ContactSection({ isDarkMode }) {
     setIsSubmitting(true)
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000)) // simulate delay
+      const body = JSON.stringify({
+          full_name: formData.name,
+          email: formData.email,
+          phone: formData.phone || null,
+          project_type: formData.projectType,
+          estimated_budget: formData.budget || null,
+          timeline: formData.timeline || null,
+          message: formData.message
+        });
+
+      console.log(body);
+      
+      const res = await fetch("/project-form", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body,
+      })
+
+      if (!res.ok) throw new Error('Failed to submit')
+
       setSubmitStatus('success')
       setFormData({
         name: '',
@@ -75,6 +94,7 @@ export default function ContactSection({ isDarkMode }) {
       setTimeout(() => setSubmitStatus(null), 5000)
     }
   }
+
 
   const labelStyle = isDarkMode ? 'text-[#F5F5F5]' : 'text-[#1A1A1A]'
   const inputBase = 'w-full px-4 py-3 rounded-xl border transition-colors duration-300 focus:outline-none focus:ring-2'
