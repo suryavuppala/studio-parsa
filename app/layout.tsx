@@ -15,11 +15,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Studio Parsa",
+  title: "Studio PARSA",
   description: `At Studio PARSA, we craft spaces that tell stories. Based in Hyderabad, we are a multidisciplinary design studio specializing in architecture, interior design, and spatial planning for both residential and commercial environments. Our philosophy blends functionality with aesthetic elegance—designing spaces that are timeless, sustainable, and deeply personal.
 From concept to execution, every project is a collaborative journey shaped by context, culture, and client aspirations. Whether it's a serene home, a dynamic workspace, or a vibrant retail environment, we approach each project with a commitment to creativity, detail, and innovation.
 Let us transform your space into a reflection of your vision.`,
+
+  icons: {
+    icon: [
+      { url: "/sp-icon.png", type: "image/png" },
+    ],
+  },
 };
+
 
 export default function RootLayout({
   children,
@@ -28,13 +35,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        
-        {children}
-        
-      </body>
-    </html>
+  <head>
+    <link rel="icon" href="/sp-icon.png" type="image/png" />
+  </head>
+  <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    {children}
+  </body>
+</html>
+
   );
 }
