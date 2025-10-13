@@ -7,18 +7,18 @@ import { motion } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 
 const teamMembers = [
-  { name: 'SATYA GUNTURU', role: 'Designer', image: '/assets/akhil.jpg' },
-  { name: 'ABHIJIT', role: 'Architect', image: '/assets/bhai.jpg' },
-  { name: 'SURYA', role: 'Planner', image: '/assets/suryaa.jpg' },
-  { name: 'KEERTHY', role: '3D Visualizer', image: '/assets/keerthy.jpg' },
-  { name: 'SPOORTHY', role: 'Consultant', image: '/assets/spoorthy.jpg' },
-  { name: 'DEEKSHA', role: 'Intern', image: '/assets/deeksha.jpg' },
-  { name: 'Member 7', role: 'Supervisor', image: '/assets/team7.jpg' },
-  { name: 'Member 8', role: 'Site Engineer', image: '/assets/team8.jpg' },
-  { name: 'Member 9', role: 'Marketing Head', image: '/assets/team9.jpg' },
-  { name: 'Member 10', role: 'Procurement', image: '/assets/team10.jpg' },
-  { name: 'Member 11', role: 'Draftsman', image: '/assets/team11.jpg' },
-  { name: 'Member 12', role: 'Project Manager', image: '/assets/team12.jpg' },
+  { name: 'SATYA GUNTURU', role: 'Founder & Principal Architect', image: '/assets/akhi.jpg' },
+  { name: 'ABHIJIT', role: 'Business Development Manager', image: '/assets/bhaai.jpg' },
+  { name: 'SURYA', role: 'Brand and Marketing Lead', image: '/assets/surya.jpg' },
+  { name: 'KEERTHY', role: 'Interior Designer', image: '/assets/keer.jpg' },
+  { name: 'SPOORTHY', role: 'Landscape Architect', image: '/assets/sappy.jpg' },
+  { name: 'DEEKSHA', role: 'IT Head', image: '/assets/deeks.jpg' },
+  { name: 'NIHITHA', role: 'Junior Architect', image: '/assets/nihitha.jpg' },
+  { name: 'Member 8', role: 'Site Engineer', image: '/assets/persona.jpg' },
+  { name: 'Member 9', role: 'Marketing Head', image: '/assets/persona.jpg' },
+  { name: 'Member 10', role: 'Procurement', image: '/assets/persona.jpg' },
+  { name: 'Member 11', role: 'Draftsman', image: '/assets/persona.jpg' },
+  { name: 'Member 12', role: 'Project Manager', image: '/assets/persona.jpg' },
 ]
 
 export default function AboutPage() {
@@ -59,8 +59,26 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-3">
-              <img src="/assets/splogo.jpg" className="w-12 h-12 rounded-full" alt="Logo" />
-              <span className="text-xl font-bold tracking-wide">STUDIO PARSA</span>
+              <div
+                className={`w-12 h-12 rounded-full flex items-center justify-center overflow-hidden ${
+                  isDarkMode 
+                    ? 'bg-[#D6B29D]' 
+                    : 'bg-[#A87E6E]'
+                }`}
+              >
+                <Image
+                  src="/assets/logologo.jpg"
+                  alt="Studio PARSA logo"
+                  width={70}
+                  height={70}
+                  className="object-cover scale-[1.52]"
+                  quality={100} // ensures max sharpness
+                  priority // loads instantly
+                />
+              </div>
+              <span className="text-xl font-bold tracking-wide">
+                STUDIO PARSA
+              </span>
             </div>
 
             {/* Desktop Menu */}
@@ -147,44 +165,42 @@ export default function AboutPage() {
       </section>
 
       {/* Meet Our Team Section */}
-      <section className="pb-20 max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 tracking-wider">Meet Our Team</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative rounded-xl overflow-hidden shadow-lg"
-            >
-              <Image
-                src={member.image}
-                alt={member.name}
-                width={400}
-                height={300}
-                className="w-full h-64 object-cover"
-              />
-              <div
-                className="absolute bottom-0 left-0 w-full px-3 py-4 bg-black bg-opacity-60 text-center"
-              >
-                <h2
-                  className="text-xl font-bold uppercase"
-                  style={{ color: themeColor }}
-                >
-                  {member.name}
-                </h2>
-                <p
-                  className="text-sm font-semibold uppercase"
-                  style={{ color: themeColor }}
-                >
-                  {member.role}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+<section className="pb-20 max-w-7xl mx-auto px-4">
+  <h2 className="text-4xl font-bold text-center mb-12 tracking-wider">Meet Our Team</h2>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+    {teamMembers.map((member, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        className="flex flex-col items-center rounded-xl shadow-lg overflow-hidden bg-white dark:bg-[#1A1A1A]"
+      >
+        {/* Image */}
+        <Image
+          src={member.image}
+          alt={member.name}
+          width={400}
+          height={400} // Make it square for consistency
+          className="w-full h-80 md:h-96 object-cover rounded-t-xl"
+        />
+
+        {/* Name and Role below the image */}
+        <div className="w-full px-4 py-4 text-center">
+          <h3 className="text-xl font-bold uppercase mb-1" style={{ color: themeColor }}>
+            {member.name}
+          </h3>
+          <p className="text-sm font-semibold uppercase" style={{ color: themeColor }}>
+            {member.role}
+          </p>
         </div>
-      </section>
+      </motion.div>
+    ))}
+  </div>
+</section>
+
 
       <FooterSection isDarkMode={isDarkMode} />
     </div>

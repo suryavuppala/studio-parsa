@@ -41,7 +41,7 @@ export default function FooterSection({ isDarkMode }: { isDarkMode: boolean }) {
         <div className="space-y-3">
           <h4 className="text-md font-semibold tracking-wide uppercase">Contact</h4>
           <p className="text-sm opacity-90">Hyderabad, India</p>
-          <p className="text-sm opacity-90">Email: <a href="mailto:studioparsa@email.com" className="hover:underline">studioparsa@email.com</a></p>
+          <p className="text-sm opacity-90">Email: <a href="mailto:studioparsa@email.com" className="hover:underline">team@studioparsa.in</a></p>
           <div className="flex space-x-4 mt-2">
             {/* Socials can be updated with real links/icons */}
             <a href="#" className="text-xl hover:scale-110 transition-transform">📸</a>
@@ -53,7 +53,7 @@ export default function FooterSection({ isDarkMode }: { isDarkMode: boolean }) {
 
       <div className="mt-10 text-center text-xs opacity-60">
   © {new Date().getFullYear()} Studio PARSA. All rights reserved. <br />
-  <span className="mt-1 block">Developed by <a href="https://www.yourwebsite.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#A87E6E]">Aadarsh Surya Vuppala</a></span>
+  <span className="mt-1 block">Developed by <a href="https://www.linkedin.com/in/aadarsh-surya-vuppala-336020255/" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#A87E6E]">Aadarsh Surya Vuppala</a></span>
 </div>
 
 

@@ -12,6 +12,8 @@ import FooterSection from './components/Sections/FooterSection'
 import Link from 'next/link'
 import QuoteEstimator from './components/QuoteEstimator'
 import PhonePopupCard from './components/PhonePopupCard'
+import HierarchySection from './components/Sections/HierarchySection'
+import Image from "next/image";
 
 export default function HomePage() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -79,16 +81,32 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <div className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ${
-                isDarkMode 
-                  ? 'bg-[#D6B29D] text-[#0F0F0F]' 
-                  : 'bg-[#A87E6E] text-white'
-              }`}>
-                <img src="/assets/splogo.jpg" className="w-12 h-12 rounded-full"/>
-              </div>
-              <span className="text-xl font-bold tracking-wide">STUDIO PARSA</span>
-            </div>
+            
+
+<div className="flex items-center space-x-3">
+  <div
+    className={`w-12 h-12 rounded-full flex items-center justify-center overflow-hidden ${
+      isDarkMode 
+        ? 'bg-[#D6B29D]' 
+        : 'bg-[#A87E6E]'
+    }`}
+  >
+    <Image
+      src="/assets/logologo.jpg"
+      alt="Studio PARSA logo"
+      width={70}
+      height={70}
+      className="object-cover scale-[1.52]"
+      quality={100} // ensures max sharpness
+      priority // loads instantly
+    />
+  </div>
+  <span className="text-xl font-bold tracking-wide">
+    STUDIO PARSA
+  </span>
+</div>
+
+
 
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center space-x-8">
@@ -238,6 +256,7 @@ export default function HomePage() {
         <AboutSection isDarkMode={isDarkMode}/>
         <FeaturesSection isDarkMode={isDarkMode} />
         <ProjectsSection isDarkMode={isDarkMode} />
+        <HierarchySection  isDarkMode={isDarkMode} />
         <ContactSection isDarkMode={isDarkMode} />
         <FooterSection isDarkMode={isDarkMode} />
         <PhonePopupCard />

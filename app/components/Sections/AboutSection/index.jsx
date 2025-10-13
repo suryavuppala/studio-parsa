@@ -31,9 +31,9 @@ export default function AboutSection({ isDarkMode }) {
   }, [])
 
   const stats = [
-    { number: '50+', label: 'Projects Completed' },
-    { number: '15+', label: 'Years Experience' },
-    { number: '25+', label: 'Awards Won' },
+    { number: '25+', label: 'Projects Completed' },
+    { number: '7+', label: 'Years Experience' },
+    { number: '100K+', label: 'Social Media Impressions' },
     { number: '100%', label: 'Client Satisfaction' }
   ]
 

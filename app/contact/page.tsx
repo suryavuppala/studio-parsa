@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { FiMail, FiPhone, FiMapPin, FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi'
+import Image from 'next/image'
 
 export default function ContactPage() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -70,15 +71,27 @@ export default function ContactPage() {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div
-                className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ${
-                  isDarkMode ? 'bg-[#D6B29D] text-[#0F0F0F]' : 'bg-[#A87E6E] text-white'
-                }`}
-              >
-                <img src="/assets/splogo.jpg" className="w-12 h-12 rounded-full" />
-              </div>
-              <span className="text-xl font-bold tracking-wide">STUDIO PARSA</span>
-            </div>
+                          <div
+                            className={`w-12 h-12 rounded-full flex items-center justify-center overflow-hidden ${
+                              isDarkMode 
+                                ? 'bg-[#D6B29D]' 
+                                : 'bg-[#A87E6E]'
+                            }`}
+                          >
+                            <Image
+                              src="/assets/logologo.jpg"
+                              alt="Studio PARSA logo"
+                              width={70}
+                              height={70}
+                              className="object-cover scale-[1.52]"
+                              quality={100} // ensures max sharpness
+                              priority // loads instantly
+                            />
+                          </div>
+                          <span className="text-xl font-bold tracking-wide">
+                            STUDIO PARSA
+                          </span>
+                        </div>
 
             {/* Desktop nav */}
             <div className="hidden md:flex items-center space-x-6">
@@ -164,21 +177,21 @@ export default function ContactPage() {
               <FiMapPin className="text-2xl mt-1 text-[#A87E6E]" />
               <div>
                 <h2 className="text-xl font-semibold">Address</h2>
-                <p>Plot No 123, Studio PARSA Lane, Hyderabad, India</p>
+                <p>Plot No 65, Hyder Nagar, Alluri Seetharamaraju Nagar, Hyderabad, India</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
               <FiPhone className="text-2xl mt-1 text-[#A87E6E]" />
               <div>
                 <h2 className="text-xl font-semibold">Phone</h2>
-                <p>+91 98765 43210</p>
+                <p>+91 80087 32414</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
               <FiMail className="text-2xl mt-1 text-[#A87E6E]" />
               <div>
                 <h2 className="text-xl font-semibold">Email</h2>
-                <p>studio.parsa@example.com</p>
+                <p>team@studioparsa.in</p>
               </div>
             </div>
           </div>

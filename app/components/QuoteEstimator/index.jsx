@@ -15,14 +15,14 @@ export default function QuoteEstimator() {
 
   const pricing = {
     residential: {
-      basic: 1400,
-      standard: 2100,
-      luxury: 2800,
+      basic: 1150,
+      standard: 1300,
+      luxury: 1550,
     },
     commercial: {
-      basic: 1600,
-      standard: 2400,
-      luxury: 3100,
+      basic: 1000,
+      standard:1150,
+      luxury: 1400,
     },
   }
 
@@ -52,8 +52,8 @@ export default function QuoteEstimator() {
       totalCost = totalSqft * baseRate
     }
 
-    const minQuote = Math.floor(totalCost * 0.9)
-    const maxQuote = Math.ceil(totalCost * 1.1)
+    const minQuote = Math.floor(totalCost * 0.95)
+    const maxQuote = Math.ceil(totalCost * 1.05)
 
     setQuote({ min: minQuote, max: maxQuote })
   }

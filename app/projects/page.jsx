@@ -128,17 +128,28 @@ export default function ProjectsPage() {
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <Image
-              src="/assets/splogo.jpg"
-              alt="Studio PARSA Logo"
-              width={48}
-              height={48}
-              className="rounded-full"
-            />
-            <span className="text-xl font-bold tracking-wide">STUDIO PARSA</span>
-          </div>
-
+          <div className="flex items-center space-x-3">
+                        <div
+                          className={`w-12 h-12 rounded-full flex items-center justify-center overflow-hidden ${
+                            isDarkMode 
+                              ? 'bg-[#D6B29D]' 
+                              : 'bg-[#A87E6E]'
+                          }`}
+                        >
+                          <Image
+                            src="/assets/logologo.jpg"
+                            alt="Studio PARSA logo"
+                            width={70}
+                            height={70}
+                            className="object-cover scale-[1.52]"
+                            quality={100} // ensures max sharpness
+                            priority // loads instantly
+                          />
+                        </div>
+                        <span className="text-xl font-bold tracking-wide">
+                          STUDIO PARSA
+                        </span>
+                      </div>
           {/* Desktop Navigation */}
           <div className="hidden md:flex gap-6 items-center">
             {['Home', 'About', 'Projects', 'Contact'].map((item) => (

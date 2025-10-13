@@ -136,8 +136,8 @@ export default function HeroSection({ isDarkMode }) {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
             }`}
           >
-            <div className="flex flex-col items-center">
-              <span className="text-white/70 text-sm mb-2">Scroll to explore</span>
+            {/* <div className="flex flex-col items-center">
+              <span className="text-white/70 text-sm mb-2"></span>
               <div
                 className={`w-6 h-10 border-2 rounded-full flex justify-center ${
                   isDarkMode ? 'border-[#D6B29D]' : 'border-white'
@@ -147,9 +147,9 @@ export default function HeroSection({ isDarkMode }) {
                   className={`w-1 h-3 rounded-full mt-2 animate-bounce ${
                     isDarkMode ? 'bg-[#D6B29D]' : 'bg-white'
                   }`}
-                ></div>
+                ></div> 
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
