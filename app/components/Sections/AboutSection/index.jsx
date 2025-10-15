@@ -121,10 +121,63 @@ export default function AboutSection({ isDarkMode }) {
             {/* Core Values */}
             <div className="space-y-4">
               {[
-                { title: 'Innovation', desc: 'Cutting-edge design solutions that push creative boundaries' },
-                { title: 'Sustainability', desc: 'Eco-conscious practices in every aspect of our work' },
-                { title: 'Excellence', desc: 'Uncompromising quality in design and execution' }
-              ].map((value, index) => (
+  {
+    title: 'Innovation in Architecture & Interior Design',
+    desc: (
+      <>
+        Delivering cutting-edge <span className="font-bold">architecture and interior design solutions</span> that push creative boundaries, incorporating <span className="font-bold">modern aesthetics, smart technology, and functional elegance</span> for residential and commercial projects.
+      </>
+    )
+  },
+  {
+    title: 'Sustainable & Eco-Friendly Design',
+    desc: (
+      <>
+        Implementing <span className="font-bold">sustainable architecture practices</span> and <span className="font-bold">eco-conscious interior design</span> in every project, ensuring <span className="font-bold">energy efficiency, minimal environmental impact, and timeless design</span>.
+      </>
+    )
+  },
+  {
+    title: 'Excellence in Execution & Quality',
+    desc: (
+      <>
+        Providing <span className="font-bold">uncompromising quality in architecture and interior execution</span>, combining <span className="font-bold">meticulous craftsmanship, precision planning, and luxury design standards</span> for both residential and commercial clients.
+      </>
+    )
+  },
+  {
+    title: 'Client-Centric Collaboration',
+    desc: (
+      <>
+        Ensuring <span className="font-bold">transparent communication</span> and <span className="font-bold">collaborative design processes</span> with every client, creating <span className="font-bold">tailored architecture and interior solutions</span> that align with lifestyles and business goals.
+      </>
+    )
+  },
+  {
+    title: 'Timeless & Elegant Spaces',
+    desc: (
+      <>
+        Creating <span className="font-bold">elegant, functional, and lasting spaces</span> that combine <span className="font-bold">aesthetic appeal with practical usability</span>, establishing a signature style for <span className="font-bold">luxury residential and commercial projects</span>.
+      </>
+    )
+  },
+  {
+    title: 'Smart & Technologically Advanced Design',
+    desc: (
+      <>
+        Integrating <span className="font-bold">smart home and office technologies</span> with <span className="font-bold">modern architecture and interior solutions</span> to enhance <span className="font-bold">efficiency, comfort, and lifestyle experience</span>.
+      </>
+    )
+  },
+  {
+    title: 'Luxury & Bespoke Detailing',
+    desc: (
+      <>
+        Offering <span className="font-bold">customized luxury design elements</span> and <span className="font-bold">bespoke interior detailing</span> that reflects client personality, brand identity, and the highest <span className="font-bold">standards of architecture and design excellence</span>.
+      </>
+    )
+  }
+].map((value, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className={`w-3 h-3 rounded-full mt-2 flex-shrink-0 ${
                     isDarkMode ? 'bg-[#D6B29D]' : 'bg-[#A87E6E]'

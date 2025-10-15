@@ -165,9 +165,16 @@ export default function ContactPage() {
       <section className="pt-28 px-4 sm:px-10 pb-16 max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4 tracking-wider">Contact Us</h1>
-          <p className="text-lg max-w-2xl mx-auto">
-            We’d love to hear from you. Whether you have a question about our projects, team, or want to collaborate — let’s connect.
-          </p>
+          <p className="text-lg leading-relaxed">
+          We’d love to hear from you! Whether you have questions about our{' '}
+          <strong>residential or commercial architecture projects</strong>,{' '}
+          <strong>interior design services</strong>, or want to{' '}
+          <strong>collaborate with our award-winning team</strong>, we’re here to connect.
+        </p>
+        <p className="text-lg leading-relaxed mt-4">
+          Reach out today to discuss how Studio PARSA can{' '}
+          <strong>transform your space with innovative, functional, and elegant design solutions</strong>.
+        </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -180,19 +187,31 @@ export default function ContactPage() {
                 <p>Plot No 65, Hyder Nagar, Alluri Seetharamaraju Nagar, Hyderabad, India</p>
               </div>
             </div>
+            <div className="flex items-start gap-4">
+  <FiPhone className="text-2xl mt-1 text-[#A87E6E]" />
+  <div>
+    <h2 className="text-xl font-semibold">Phone</h2>
+    <p>
+      <a href="tel:+918008732414" className="hover:underline">
+        +91 80087 32414
+      </a>
+    </p>
+  </div>
+</div>
+
             <div className="flex items-start space-x-4">
-              <FiPhone className="text-2xl mt-1 text-[#A87E6E]" />
-              <div>
-                <h2 className="text-xl font-semibold">Phone</h2>
-                <p>+91 80087 32414</p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-4">
-              <FiMail className="text-2xl mt-1 text-[#A87E6E]" />
-              <div>
-                <h2 className="text-xl font-semibold">Email</h2>
-                <p>team@studioparsa.in</p>
-              </div>
+              <div className="flex items-start gap-4">
+  <FiMail className="text-2xl mt-1 text-[#A87E6E]" />
+  <div>
+    <h2 className="text-xl font-semibold">Email</h2>
+    <p>
+      <a href="mailto:team@studioparsa.in" className="hover:underline">
+        team@studioparsa.in
+      </a>
+    </p>
+  </div>
+</div>
+
             </div>
           </div>
 

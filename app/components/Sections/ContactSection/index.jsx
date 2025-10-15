@@ -251,8 +251,20 @@ export default function ContactSection({ isDarkMode }) {
             {/* Placeholder or additional content */}
             <div className={`text-center ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
               <p className="text-xl font-medium">Or reach us directly at:</p>
-              <p className="mt-2">📧 team@studioparsa.in</p>
-              <p className="mt-1">📞 +91-80087 32414</p>
+              <div className="mt-2 space-y-1">
+  <p>
+    📧{' '}
+    <a href="mailto:team@studioparsa.in" className="hover:underline text-[#A87E6E]">
+      team@studioparsa.in
+    </a>
+  </p>
+  <p>
+    📞{' '}
+    <a href="tel:+918008732414" className="hover:underline text-[#A87E6E]">
+      +91-80087 32414
+    </a>
+  </p>
+</div>
             </div>
           </div>
         </div>

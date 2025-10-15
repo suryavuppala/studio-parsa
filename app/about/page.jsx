@@ -15,7 +15,7 @@ const teamMembers = [
   { name: 'DEEKSHA', role: 'IT Head', image: '/assets/deeks.jpg' },
   {name: 'SANJANA KANTH', role: 'Junior Architect', image: '/assets/kanth.jpg' },
   { name: 'NIHITHA', role: 'Junior Architect', image: '/assets/nihitha.jpg' },
-  { name: 'Member 9', role: 'Marketing Head', image: '/assets/persona.jpg' },
+  { name: 'GIYI KIM', role: 'Business Advisor', image: '/assets/kiyi.jpg' },
   { name: 'Member 10', role: 'Procurement', image: '/assets/persona.jpg' },
   { name: 'Member 11', role: 'Draftsman', image: '/assets/persona.jpg' },
   { name: 'Member 12', role: 'Project Manager', image: '/assets/persona.jpg' },
@@ -134,28 +134,32 @@ export default function AboutPage() {
           <div>
             <h1 className="text-5xl font-bold mb-6 tracking-tight">About STUDIO PARSA</h1>
             <p className="text-lg leading-8 text-justify">
-              Studio PARSA is an award-winning architecture and interior design firm specializing in elegant,
-              timeless, and functional spaces. Our multidisciplinary team brings together creativity and technical
-              excellence to design structures that speak to the present while standing strong into the future.
+              Studio PARSA is a premier architecture and interior design firm specializing in luxury, modern, and timeless spaces. Our award-winning team delivers bespoke residential, commercial, and interior design solutions, blending creative vision with technical precision. We design functional, elegant, and sustainable spaces that reflect our clients’ lifestyle and aspirations. From concept design and space planning to project execution and interior styling, Studio PARSA transforms every space into a masterpiece of modern architecture and interiors.
             </p>
           </div>
         </div>
 
         {/* Additional Cards */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
-          {[
-            'We integrate sustainable principles in all our projectsWe integrate sustainable principles in all our projectsWe integrate sustainable principles in all our projects.',
-            'Our client-first approach ensures total transparencysustainable principles in all our projectsWe integrate sustainable .',
-            'We handle everything from concept to executionsustainable principles in all our projectsWe integrate sustainable sustainable principles in all our projectsWe integrate sustainable .',
-          ].map((text, idx) => (
+          { [
+  <span>
+    We integrate <strong>sustainable architecture and interior design principles</strong> into every project, creating <strong>eco-friendly, energy-efficient, and timeless spaces</strong> for residential and commercial clients.
+  </span>,
+  <span>
+    Our <strong>client-first approach</strong> ensures <strong>complete transparency, collaboration, and personalized design solutions</strong>, making Studio PARSA a trusted <strong>luxury architecture and interior design firm</strong>.
+  </span>,
+  <span>
+    We manage every step from <strong>conceptual design and space planning</strong> to <strong>execution and interior styling</strong>, delivering <strong>bespoke, functional, and visually stunning spaces</strong> that reflect <strong>modern elegance and sustainable design</strong>.
+  </span>,
+].map((text, idx) => (
             <div
               key={idx}
-              className={`p-6 rounded-xl shadow-md text-lg font-semibold tracking-wide ${
+              className={`p-6 rounded-xl shadow-md text-md font-semibold tracking-wide  text-white ${
                 idx === 0
-                  ? 'bg-[#EFE4DC]'
+                  ? 'bg-[#A88F7A]'
                   : idx === 1
-                  ? 'bg-[#DDD3C3]'
-                  : 'bg-[#C6B4A1]'
+                  ? 'bg-[#8A6B54]'
+                  : 'bg-[#6B4731]'
               }`}
             >
               {text}
