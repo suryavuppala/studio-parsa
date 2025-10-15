@@ -27,64 +27,100 @@ export default function FeaturesSection({ isDarkMode }) {
   const features = [
     {
       icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-        </svg>
-      ),
-      title: 'Residential Design',
-      description: 'Luxury homes and private residences that reflect your unique lifestyle and personality.',
-      features: ['Custom Home Design', 'Renovation & Remodeling', 'Sustainable Living Solutions', 'Smart Home Integration']
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z" />
-        </svg>
-      ),
-      title: 'Commercial Spaces',
-      description: 'Innovative commercial architecture that enhances productivity and brand identity.',
-      features: ['Office Buildings', 'Retail Spaces', 'Hospitality Design', 'Mixed-Use Developments']
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
-        </svg>
-      ),
-      title: 'Interior Design',
-      description: 'Sophisticated interior solutions that maximize space while maintaining elegance.',
-      features: ['Space Planning', 'Furniture Selection', 'Lighting Design', 'Art & Accessories']
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-        </svg>
-      ),
-      title: 'Consultation',
-      description: 'Expert architectural consultation to bring your vision to life with professional guidance.',
-      features: ['Design Consultation', 'Project Management', 'Permit Assistance', 'Construction Oversight']
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
-        </svg>
-      ),
-      title: 'Sustainable Design',
-      description: 'Eco-friendly solutions that minimize environmental impact while maximizing efficiency.',
-      features: ['Green Building Certification', 'Energy Efficiency', 'Renewable Materials', 'Water Conservation']
-    },
-    {
-      icon: (
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
-      title: 'Innovation',
-      description: 'Cutting-edge design technologies and methodologies for future-ready spaces.',
-      features: ['3D Modeling & VR', 'AI-Assisted Design', 'Parametric Architecture', 'Digital Twin Technology']
-    }
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    ),
+    title: 'Residential Architecture & Interior Design in Hyderabad',
+    description:
+      'Studio PARSA designs luxury homes and bespoke residential interiors in Hyderabad that blend modern aesthetics with functionality. From custom villas to smart home solutions, our award-winning architects create personalized, sustainable spaces that reflect your lifestyle and elevate everyday living.',
+    features: [
+      'Custom Home Design & Planning',
+      'Luxury Villa Architecture',
+      'Renovation & Remodeling',
+      'Sustainable Living & Smart Homes'
+    ],
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2v16z" />
+      </svg>
+    ),
+    title: 'Commercial Architecture in Hyderabad',
+    description:
+      'We design innovative commercial buildings and interior spaces that reflect brand identity and enhance productivity. From office interiors and co-working spaces to retail and hospitality projects, Studio PARSA combines aesthetics, efficiency, and brand storytelling to deliver impactful commercial environments.',
+    features: [
+      'Office Architecture & Interior Design',
+      'Retail & Hospitality Spaces',
+      'Co-working Space Design',
+      'Mixed-use & Corporate Developments'
+    ],
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
+      </svg>
+    ),
+    title: 'Interior Design Studio in Hyderabad',
+    description:
+      'Our interior design team at Studio PARSA transforms spaces with luxury furniture, curated lighting, and bespoke decor. We specialize in contemporary, minimalist, and classic interiors tailored to each client’s lifestyle while maximizing comfort and elegance.',
+    features: [
+      'Luxury Interior Design Concepts',
+      'Furniture & Lighting Selection',
+      'Custom Material Palette Creation',
+      'Art, Decor & Styling Integration'
+    ],
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      </svg>
+    ),
+    title: 'Architectural Consultation & Project Management',
+    description:
+      'Studio PARSA provides expert architectural consultation in Hyderabad for residential and commercial projects. We guide clients through design strategy, project feasibility, regulatory approvals, and construction supervision for seamless execution.',
+    features: [
+      'Architectural & Design Consultation',
+      'Project Feasibility Reports',
+      'Construction Supervision',
+      'Permit & Compliance Support'
+    ],
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9" />
+      </svg>
+    ),
+    title: 'Sustainable & Green Building Design',
+    description:
+      'Studio PARSA integrates sustainability into every design. We specialize in energy-efficient architecture, green building certification, and eco-conscious materials that reduce carbon footprint while maintaining aesthetic appeal.',
+    features: [
+      'Green Building Design & LEED Certification',
+      'Energy & Water Efficiency Optimization',
+      'Use of Renewable Materials',
+      'Passive Cooling & Natural Light Strategies'
+    ],
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+    title: 'Innovative Architecture & Smart Design Solutions',
+    description:
+      'At Studio PARSA, innovation meets artistry. We use cutting-edge 3D visualization, parametric modeling, and AI-assisted design tools to create future-ready spaces with precision and creativity.',
+    features: [
+      '3D Visualization & Virtual Reality',
+      'AI-Powered Design Exploration',
+      'Parametric & Modular Architecture',
+      'Digital Twin Simulation'
+    ],
+  },
   ]
 
   return (
@@ -224,13 +260,16 @@ export default function FeaturesSection({ isDarkMode }) {
             }`}>
               Let's discuss how we can bring your architectural vision to life with our expertise and passion.
             </p>
-            <button className={`px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-              isDarkMode
-                ? 'bg-[#D6B29D] text-[#0F0F0F] hover:bg-[#C5A08A]'
-                : 'bg-white text-[#A87E6E] hover:bg-[#F5F5F5]'
-            }`}>
-              Schedule a Consultation
-            </button>
+            <button
+  onClick={() => (window.location.href = '/contact')}
+  className={`px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+    isDarkMode
+      ? 'bg-[#D6B29D] text-[#0F0F0F] hover:bg-[#C5A08A]'
+      : 'bg-white text-[#A87E6E] hover:bg-[#F5F5F5]'
+  }`}
+>
+  Schedule a Consultation
+</button>
           </div>
         </div>
       </div>

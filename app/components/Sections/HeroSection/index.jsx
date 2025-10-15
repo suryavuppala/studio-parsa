@@ -17,20 +17,23 @@ export default function HeroSection({ isDarkMode }) {
   // Content for each slide
   const heroContent = [
     {
-      titleLine1: 'Crafting Spaces',
-      titleLine2: 'That Inspire',
-      subtitle: 'Studio PARSA specializes in luxury architectural design and interior solutions that blend modern aesthetics with timeless elegance.',
-    },
-    {
-      titleLine1: 'Designing Dreams',
-      titleLine2: 'With Precision',
-      subtitle: 'From concept to completion, our team delivers stunning architecture tailored to your lifestyle and vision.',
-    },
-    {
-      titleLine1: 'Interiors that',
-      titleLine2: 'Tell Your Story',
-      subtitle: 'Our interiors reflect your identity, combining comfort, functionality, and elegance seamlessly.',
-    },
+    titleLine1: 'Crafting Iconic Spaces',
+    titleLine2: 'That Inspire Every Day',
+    subtitle:
+      'Studio PARSA — Hyderabad’s leading architecture and interior design studio — creating bespoke residential and commercial spaces that balance innovation, sustainability, and timeless elegance.',
+  },
+  {
+    titleLine1: 'Designing Dreams',
+    titleLine2: 'With Architectural Precision',
+    subtitle:
+      'From luxury homes to modern offices, we transform your ideas into visually stunning and functionally efficient spaces — crafted with creativity, technology, and care.',
+  },
+  {
+    titleLine1: 'Interiors That',
+    titleLine2: 'Reflect Your Lifestyle',
+    subtitle:
+      'We curate interiors that tell your story — blending textures, light, and materials to create spaces that feel personal, elegant, and deeply human.',
+  },
   ]
 
   useEffect(() => {

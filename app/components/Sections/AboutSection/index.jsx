@@ -79,18 +79,43 @@ export default function AboutSection({ isDarkMode }) {
               <p className={`text-lg leading-relaxed mb-6 ${
                 isDarkMode ? 'text-[#F5F5F5]/80' : 'text-[#1A1A1A]/80'
               }`}>
-                Founded in 2008, Studio PARSA has been at the forefront of architectural innovation, 
-                creating spaces that seamlessly blend functionality with aesthetic excellence. Our 
-                philosophy centers on understanding the unique needs of each client while pushing 
-                the boundaries of contemporary design.
+                Founded in 2018, <strong>Studio PARSA</strong> has been at the forefront of 
+    <strong> architectural design in Hyderabad</strong>, creating spaces that 
+    seamlessly blend functionality with aesthetic excellence. Our 
+    philosophy centers on understanding the unique needs of each client while 
+    pushing the boundaries of <strong>modern architecture and interior design</strong>.
               </p>
               <p className={`text-lg leading-relaxed ${
                 isDarkMode ? 'text-[#F5F5F5]/80' : 'text-[#1A1A1A]/80'
               }`}>
-                We specialize in luxury residential projects, commercial spaces, and bespoke interior 
-                design solutions. Every project is approached with meticulous attention to detail, 
-                sustainable practices, and a commitment to timeless elegance.
-              </p>
+                We specialize in <strong>luxury residential architecture</strong>, 
+    <strong> commercial interiors</strong>, and <strong>bespoke home design</strong> 
+    across Hyderabad. Every project is approached with meticulous attention to 
+    detail, sustainable practices, and a commitment to timeless elegance.{' '}
+    <a 
+      href="/projects" 
+      className={`underline font-semibold hover:opacity-80 transition ${
+  isDarkMode ? 'text-[#D6B29D]' : 'text-[#A87E6E]'
+}`}
+
+      title="Explore Studio PARSA Projects"
+    >
+      Explore our projects
+    </a>{' '}or{' '}
+    <a 
+      href="/contact" 
+      className={`underline font-semibold hover:opacity-80 transition ${
+  isDarkMode ? 'text-[#D6B29D]' : 'text-[#A87E6E]'
+}`}
+
+      title="Contact Studio PARSA Hyderabad"
+    >
+      contact us
+    </a>{' '}
+    today to start building your dream space with the leading 
+    <strong> architects in Hyderabad</strong>.
+  </p>
+              
             </div>
 
             {/* Core Values */}

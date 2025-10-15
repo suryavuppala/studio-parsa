@@ -15,15 +15,57 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Studio PARSA",
-  description: `At Studio PARSA, we craft spaces that tell stories. Based in Hyderabad, we are a multidisciplinary design studio specializing in architecture, interior design, and spatial planning for both residential and commercial environments. Our philosophy blends functionality with aesthetic elegance—designing spaces that are timeless, sustainable, and deeply personal.
-From concept to execution, every project is a collaborative journey shaped by context, culture, and client aspirations. Whether it's a serene home, a dynamic workspace, or a vibrant retail environment, we approach each project with a commitment to creativity, detail, and innovation.
-Let us transform your space into a reflection of your vision.`,
+   title:
+    "Studio PARSA | Best Architects & Interior Designers in Hyderabad | Luxury Residential & Commercial Spaces",
+  description:
+    "Studio PARSA is Hyderabad’s leading architecture and interior design studio crafting luxury, sustainable, and modern spaces. From residential villas to commercial interiors, we transform ideas into elegant realities across Telangana and beyond.",
+  keywords: [
+    "best architects in Hyderabad",
+    "architecture firms Hyderabad",
+    "interior designers Hyderabad",
+    "luxury home interiors Hyderabad",
+    "residential architecture",
+    "commercial interiors Hyderabad",
+    "modern architects Telangana",
+    "Studio PARSA",
+    "architectural design studio Hyderabad",
+    "hyderabad architecture and interiors",
+    "sustainable design Hyderabad",
+  ],
+  authors: [{ name: "Studio PARSA" }],
+  creator: "Studio PARSA",
+  publisher: "Studio PARSA",
+
+  openGraph: {
+    title:
+      "Studio PARSA | Award-Winning Architects & Interior Designers in Hyderabad",
+    description:
+      "Explore Studio PARSA — the Hyderabad-based architecture and interior design studio blending creativity, sustainability, and luxury design aesthetics.",
+    url: "https://studioparsa.in",
+    siteName: "Studio PARSA",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/assets/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Studio PARSA — Architecture & Interior Design in Hyderabad",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Studio PARSA | Architecture & Interior Design in Hyderabad",
+    description:
+      "Hyderabad’s creative architecture & interior design studio specializing in elegant, functional spaces — Studio PARSA.",
+    images: ["/assets/og-image.jpg"],
+  },
 
   icons: {
-    icon: [
-      { url: "/sp-icon.png", type: "image/png" },
-    ],
+    icon: "/assets/faicon.ico",
   },
 };
 
